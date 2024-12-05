@@ -1,0 +1,73 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: lightblue;
+}
+
+.content {
+    margin: 0 auto;
+    width: 800px;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+    table-layout: auto; /* Permite que las columnas se ajusten automáticamente */
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    text-align: center;
+    padding: 5px;
+    overflow: hidden; /* Opcional: evita que el contenido desborde */
+    text-overflow: ellipsis;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+#content {
+    width: 70%;
+}
+.flex-form {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 10px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si el espacio es limitado */
+}
+
+.flex-form label {
+    font-weight: bold; /* Opcional: para destacar las etiquetas */
+    margin-right: 5px;
+}
+
+.flex-form input[type="text"],
+.flex-form input[type="date"] {
+    flex: 1; /* Hace que los campos ocupen el mismo espacio */
+    padding: 5px;
+    font-size: 14px;
+}
+
+.flex-form input[type="submit"] {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.flex-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
