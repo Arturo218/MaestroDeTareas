@@ -36,6 +36,7 @@ Sigue estos pasos para ejecutar el proyecto en tu máquina local desde el cmd:
 - Clona el repositorio:
 
 git clone https://github.com/Arturo218/MaestroDeTareas.git
+
 cd MaestroDeTareas
 
 - Crea un entorno virtual:
@@ -53,4 +54,5 @@ pip install -r requirements.txt
 - Ejecuta la aplicación:
 
 python app.py
+
 Abre un navegador web e ingresa a http://127.0.0.1:5000 para acceder a la aplicación Web.
