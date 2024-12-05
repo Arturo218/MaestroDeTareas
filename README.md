@@ -33,8 +33,7 @@ Una aplicación web sencilla desarrollada con **Python**, **Flask** y **SQLite3*
 
 Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
-1. **Clona el repositorio**:
-   ```bash
+**Clona el repositorio**:
    git clone https://github.com/Arturo218/MaestroDeTareas.git
    cd MaestroDeTareas
 
