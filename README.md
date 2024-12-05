@@ -35,8 +35,8 @@ Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/usuario/maestro-de-tareas.git
-   cd maestro-de-tareas
+   git clone https://github.com/Arturo218/MaestroDeTareas.git
+   cd MaestroDeTareas
 
 Utilizando una terminal realiza los siguientes pasos:
 
