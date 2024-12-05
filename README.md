@@ -37,7 +37,7 @@ Sigue estos pasos para ejecutar el proyecto en tu máquina local:
    git clone https://github.com/Arturo218/MaestroDeTareas.git
    cd MaestroDeTareas
 
-Utilizando una terminal realiza los siguientes pasos:
+Utilizando el cmd realiza los siguientes pasos:
 
 -Crea un entorno virtual:
 python -m venv env
