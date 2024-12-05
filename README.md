@@ -31,21 +31,22 @@ Una aplicación web sencilla desarrollada con **Python**, **Flask** y **SQLite3*
 
 ## Instalación y configuración
 
-Sigue estos pasos para ejecutar el proyecto en tu máquina local:
+Sigue estos pasos para ejecutar el proyecto en tu máquina local desde el cmd:
 
 **Clona el repositorio**:
    git clone https://github.com/Arturo218/MaestroDeTareas.git
    cd MaestroDeTareas
 
-Utilizando el cmd realiza los siguientes pasos:
-
--Crea un entorno virtual:
+**Crea un entorno virtual**:
 python -m venv env
+
+**Activar el entorno virtual**:
 source env/bin/activate  # En Windows: .\env\Scripts\activate
 
--Instala las dependencias desde la termina:
+**Instala las dependencias desde la termina**:
 pip install -r requirements.txt
 
-Ejecuta la aplicación:
+**Ejecuta la aplicación**:
 python app.py
+
 Abre un navegador web e ingresa a http://127.0.0.1:5000 para acceder a la aplicación Web.
