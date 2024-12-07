@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
+<img src="{{ url_for('static', filename='images/logoUI.png') }}" alt="U. Internacional de Aguascalientes" width="300">
 <title>Maestro de Tareas</title>
 {% endblock %}
 
@@ -36,17 +37,20 @@
                 <label for="content">Tarea:</label>
                 <input type="text" name="content" id="content">
                 <label for="observations">Observaciones:</label>
-                <textarea name="observations" placeholder="Observaciones (opcional)"></textarea>
+                <input type="text" name="observations" id="observations">
                 </br><input type="submit" value="Agregar Tarea">
             </form>
         </div>
 
+        </br>
+        </br>
         <div style="margin-top: 40px; text-align: center; font-size: 16px; color: #333;">
             <p>Esta aplicación web es un <b>Gestor de Tareas</b> desarrollado en <b>Python</b> utilizando los frameworks
                 <b>Flask</b> y <b>SQLite3</b> <br />como base de datos. Su objetivo principal es permitir a los usuarios
-                crear, visualizar, actualizar y eliminar <br />tareas de manera sencilla y eficiente a través de una interfaz
-                amigable.</p>
+                crear, visualizar, actualizar y eliminar <br />tareas de manera sencilla y eficiente a través de una
+                interfaz
+                amigable.
+            </p>
         </div>
-
 </div>
 {% endblock %}

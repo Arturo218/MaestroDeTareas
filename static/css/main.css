@@ -1,82 +1,122 @@
-body, html {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: lightblue;
+/* =====================================================
+   Estilos globales para el documento.
+   ===================================================== */
+   body, html {
+    margin: 0; /* Elimina márgenes predeterminados */
+    font-family: sans-serif; /* Define una fuente estándar */
+    background-color: lightblue; /* Fondo del sitio */
 }
 
+/* =====================================================
+   Estilos específicos para la sección principal.
+   ===================================================== */
 .content {
-    margin: 0 auto;
-    width: 800px;
+    margin: 0 auto; /* Centra el contenido */
+    width: 800px; /* Define el ancho máximo */
 }
 
+/* =====================================================
+   Estilos específicos para tablas y celdas.
+   ===================================================== */
 table, td, th {
-    border: 1px solid #aaa;
-    table-layout: auto; /* Permite que las columnas se ajusten automáticamente */
-    width: 100%;
+    border: 1px solid #aaa; /* Bordes uniformes */
+    table-layout: auto; /* Ajusta automáticamente las columnas */
+    width: 100%; /* Tablas ocuparán todo el ancho del contenedor */
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    text-align: center;
-    padding: 5px;
-    overflow: hidden; /* Opcional: evita que el contenido desborde */
-    text-overflow: ellipsis;
+    border-collapse: collapse; /* Evita espacios entre bordes */
+    text-align: center; /* Centra el contenido de la tabla */
+    padding: 5px; /* Espaciado interno */
+    overflow: hidden; /* Evita desbordes del contenido */
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto desborda */
 }
 
 th {
-    height: 30px;
+    height: 30px; /* Altura de las cabeceras */
 }
 
 td {
-    text-align: center;
-    padding: 5px;
+    text-align: center; /* Centra el texto en las celdas */
+    padding: 5px; /* Espaciado interno */
 }
 
+/* =====================================================
+   Estilos específicos para formularios y sus elementos.
+   ===================================================== */
 .form {
-    margin-top: 20px;
+    margin-top: 20px; /* Espaciado superior del formulario */
 }
 
-#content {
-    width: 70%;
-}
+/* Flexbox layout for forms */
 .flex-form {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
-    gap: 10px; /* Espacio entre los elementos */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten si el espacio es limitado */
+    display: flex; /* Activa diseño flexbox */
+    align-items: center; /* Alineación vertical de los elementos */
+    gap: 10px; /* Espaciado horizontal entre elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
 }
 
-.flex-form label {
-    font-weight: bold; /* Opcional: para destacar las etiquetas */
-    margin-right: 5px;
-}
-
-.flex-form input[type="text"],
-.flex-form input[type="date"] {
-    flex: 1; /* Hace que los campos ocupen el mismo espacio */
-    padding: 5px;
-    font-size: 14px;
-}
-
-.flex-form input[type="submit"] {
-    padding: 8px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.flex-form input[type="submit"]:hover {
-    background-color: #45a049;
-}
-textarea {
-    width: 70%;
-    height: 50px;
-    margin: 10px 0;
-}
+/* Estilo de etiquetas en formularios */
 label {
-    margin: 10px 0;
-    display: block;
+    display: block; /* Alinea las etiquetas en líneas separadas */
+    margin: 10px 0; /* Espaciado superior e inferior */
+    font-weight: bold; /* Resalta las etiquetas */
+}
+
+input[type="text"] {
+    width: 100%; /* Ajusta el ancho del campo de entrada */
+    padding: 8px; /* Añade espacio interno al campo de entrada */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    border: 1px solid #ccc; /* Define un borde para el campo */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Asegura que el ancho incluye el padding y el borde */
+}
+
+
+/* Campos de texto */
+.flex-form input[type="text"],
+.flex-form input[type="date"],
+textarea {
+    flex: 1; /* Ocupan el mismo espacio en flexbox */
+    width: 100%; /* Se ajustan al ancho del contenedor */
+    padding: 5px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente estándar */
+}
+
+
+/* Botón de envío */
+input[type="submit"] {
+    margin-top: 10px; /* Espaciado superior */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    float: right; /* Alinea el botón a la derecha */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Color de fondo al pasar el cursor */
+}
+
+/* =====================================================
+   Estilos adicionales para campos específicos.
+   ===================================================== */
+#content,
+#observations {
+    width: 100%; /* Ocupan todo el ancho del contenedor */
+}
+/* =====================================================
+   Estilos adicionales para la imagen.
+   ===================================================== */
+.logo {
+    text-align: center; /* Centra horizontalmente */
+    margin: 20px 0; /* Añade espacio arriba y abajo */
+}
+
+.logo img {
+    max-width: 100%; /* Evita que la imagen exceda el contenedor */
+    height: auto; /* Mantiene la proporción */
+    
 }
