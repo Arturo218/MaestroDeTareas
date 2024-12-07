@@ -71,3 +71,12 @@ td {
 .flex-form input[type="submit"]:hover {
     background-color: #45a049;
 }
+textarea {
+    width: 70%;
+    height: 50px;
+    margin: 10px 0;
+}
+label {
+    margin: 10px 0;
+    display: block;
+}

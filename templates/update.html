@@ -11,13 +11,18 @@
     <div class="form">
         <form action="/update/{{task.id}}" method="POST" class="flex-form">
             <label for="content">Tarea:</label>
-            <input type="text" name="content" id="content" value="{{task.content}}">
-    
+            <input type="text" name="content" id="content" value="{{task.content}}"></form></br>
+            <textarea name="observations" placeholder="Actualizar observaciones">{{task.observations}}</textarea></br>
             <label for="date_created">Fecha:</label>
-            <input type="datetime-local" name="date_created" id="date_created" value="{{ task.date_created.strftime('%Y-%m-%dT%H:%M') }}">
-    
+            <input type="datetime-local" name="date_created" id="date_created"
+                value="{{ task.date_created.strftime('%Y-%m-%dT%H:%M') }}">
+
             <input type="submit" value="Actualizar">
-        </form> 
+        </form>
     </div>
+    <p style="text-align: center; font-size: 16px; color: #555;">
+        En esta sección, se puede actualizar tanto el contenido de la tarea como la fecha de registro.
+        </br>Una vez realizado los cambio haga clic en el botón <b>Actualizar</b>.
+    </p>
 </div>
 {% endblock %}

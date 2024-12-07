@@ -10,6 +10,7 @@ class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
+    observations = db.Column(db.String(200), nullable=True)  # Nueva columna para observaciones
 
     def __repr__(self):
         return '<Task %r>' % self.id
@@ -19,10 +20,13 @@ class Todo(db.Model):
 def index():
     if request.method == 'POST':
         task_content = request.form['content']
+        observations = request.form['observations']  # Captura las observaciones
+
         new_task = Todo(content=task_content)
 
         try:
             db.session.add(new_task)
+            db.session.add(observations)
             db.session.commit()
             return redirect('/')
         except:
@@ -52,6 +56,7 @@ def update(id):
 
     if request.method == 'POST':
         task.content = request.form['content']
+        task.observations = request.form['observations']  # Captura las observaciones
         new_date_created = request.form['date_created']
 
         try:

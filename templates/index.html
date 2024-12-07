@@ -7,34 +7,46 @@
 {% block body %}
 <div class="content">
     <h1 style="text-align: center">Maestro de Tareas</h1>
-    {% if tasks|length < 1 %}
-    <h4 style="text-align: center">No hay tareas. Cree una a continuación!</h4>
-    {% else %}
-    <table>
-        <tr>
-            <th>Terea</th>
-            <th>Fecha Registro</th>
-            <th>Acción</th>
-        </tr>
-        {% for task in tasks %}
+    {% if tasks|length < 1 %} <h4 style="text-align: center">No hay tareas. Cree una a continuación!</h4>
+        {% else %}
+        <table>
+            <tr>
+                <th>Terea</th>
+                <th>Fecha de Registro</th>
+                <th>Observaciones</th>
+                <th>Acción</th>
+            </tr>
+            {% for task in tasks %}
             <tr>
                 <td>{{ task.content }}</td>
                 <td>{{ task.date_created.strftime('%Y-%m-%dT%H:%M') }}</td>
+                <td>{{ task.observations }}</td>
                 <td>
                     <a href="/delete/{{task.id}}">Borrar</a>
                     <br>
                     <a href="/update/{{task.id}}">Actualizar</a>
                 </td>
             </tr>
-        {% endfor %}
-    </table>
-    {% endif %}
+            {% endfor %}
+        </table>
+        {% endif %}
 
-    <div class="form">
-        <form action="/" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Agregar Tarea">
-        </form>
-    </div>
+        <div class="form">
+            <form action="/" method="POST">
+                <label for="content">Tarea:</label>
+                <input type="text" name="content" id="content">
+                <label for="observations">Observaciones:</label>
+                <textarea name="observations" placeholder="Observaciones (opcional)"></textarea>
+                </br><input type="submit" value="Agregar Tarea">
+            </form>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center; font-size: 16px; color: #333;">
+            <p>Esta aplicación web es un <b>Gestor de Tareas</b> desarrollado en <b>Python</b> utilizando los frameworks
+                <b>Flask</b> y <b>SQLite3</b> <br />como base de datos. Su objetivo principal es permitir a los usuarios
+                crear, visualizar, actualizar y eliminar <br />tareas de manera sencilla y eficiente a través de una interfaz
+                amigable.</p>
+        </div>
+
 </div>
 {% endblock %}
